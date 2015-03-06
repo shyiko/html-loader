@@ -60,6 +60,8 @@ module.exports = function(content) {
 		content = htmlMinifier.minify(content, {
 			removeComments: query.removeComments !== false,
 			collapseWhitespace: query.collapseWhitespace !== false,
+			conservativeCollapse: query.collapseWhitespace !== false &&
+      				query.conservativeCollapse === true,
 			collapseBooleanAttributes: query.collapseBooleanAttributes !== false,
 			removeAttributeQuotes: query.removeAttributeQuotes !== false,
 			removeRedundantAttributes: query.removeRedundantAttributes !== false,
